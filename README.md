@@ -1,4 +1,4 @@
-THIS IS A NEW PORTFOLIO, sme issues with the human resources coseulor who says that my previous portfolio is not intuitive, so, to RE-DOIT
+THIS IS A NEW PORTFOLIO, some issues with the human resources conselor who says that my previous portfolio is not intuitive, so, to RE-DOIT.
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
