@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";  //en el tutorial no aparece, pero, aqui de debe usar para colocar las imagenes
 import NavLink from "./navLink.jsx"
-import { motion } from "framer-motion";
+import { motion, stagger } from "framer-motion";
 
 const links = [
   { url: "/", title: "Home" },
@@ -50,6 +50,21 @@ const Navbar = () => {
       },
       opened: {
         x: 0,
+        transition: {
+          when: "beforeChildren",
+          staggerChildren: 0.2,
+        },
+      },
+    };
+
+    const listItemVariants = {
+      closed: {
+        x:-10,
+        opacity:0,
+      },
+      opened: {
+        x:0,
+        opacity:1,
       },
     };
 
@@ -122,9 +137,9 @@ const Navbar = () => {
               className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 z-40 text-4xl"
             >
               {links.map((link) => (
-                <Link href={link.url} key={link.title}>
-                  {link.title}
-                </Link>
+                <motion.div variants={listItemVariants} className="" key={link.title}>
+                  <Link href={link.url}>{link.title}</Link>
+                </motion.div>
               ))}
             </motion.div>
           )}
