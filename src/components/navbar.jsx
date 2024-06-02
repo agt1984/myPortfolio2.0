@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";  //en el tutorial no aparece, pero, aqui de debe usar para colocar las imagenes
 import NavLink from "./navLink.jsx"
+import { motion } from "framer-motion";
 
 const links = [
   { url: "/", title: "Home" },
@@ -12,13 +13,45 @@ const links = [
 ];
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+
+    const topVariants = {
+      closed:{
+        rotate:0,
+      },
+      opened:{
+        rotate:45,
+        backgroundColor:"rgb(255,255,255)"
+      }
+    }
+
+    const centerVariants = {
+      closed: {
+        opacity:1,
+      },
+      opened: {
+        opacity:0,
+      }
+    };
+
+    const bottomVariants = {
+      closed: {
+        opacity: 1,
+      },
+      opened: {
+        rotate: -45,
+        backgroundColor:"rgb(255,255,255)",
+      },
+    };
+
+
+
     return (
       <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
         {/*LINKS*/}
         <div className="hidden md:flex gap-4 w-1/3">
           {links.map((link) => (
-            <NavLink link={link} key={link.title}/>
+            <NavLink link={link} key={link.title} />
           ))}
         </div>
         {/* LOGO */}
@@ -54,9 +87,22 @@ const Navbar = () => {
             className="w-10 h-8 flex flex-col justify-between z-50 relative"
             onClick={() => setOpen((prev) => !prev)}
           >
-            <div className="w-10 h-1 bg-white rounded"></div>
-            <div className="w-10 h-1 bg-white rounded"></div>
-            <div className="w-10 h-1 bg-white rounded"></div>
+            <motion.div
+              motion
+              variants={topVariants}
+              animate={open ? "opened" : "closed"}
+              className="w-10 h-1 bg-black rounded"
+            ></motion.div>
+            <motion.div
+              variants={centerVariants}
+              animate={open ? "opened" : "closed"}
+              className="w-10 h-1 bg-black rounded"
+            ></motion.div>
+            <motion.div
+              variants={bottomVariants}
+              animate={open ? "opened" : "closed"}
+              className="w-10 h-1 bg-black rounded"
+            ></motion.div>
           </button>
           {/*MENU LIST*/}
           {open && (
