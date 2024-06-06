@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 interface IProps extends LinkProps {
   children: ReactNode;
-  linkType: "primary" | "secondary" | "link" | "none";
+  linkType?: "primary" | "secondary" | "link" | "none";
   className?: string;
 }
 
@@ -18,7 +18,7 @@ const styled = {
 
 export function CustomLink({ 
     children, 
-    linkType, 
+    linkType = "primary", 
     className, 
     ...props 
 }: IProps ) {
