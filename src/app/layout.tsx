@@ -28,9 +28,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(roboto.className, bebas.variable, "bg-zinc-900 text-zinc-50")}>
+      <body className={cn(
+        roboto.className, 
+        bebas.variable, 
+        "bg-zinc-900 text-zinc-50"
+        )}
+      >
         <Navigation />
-        {children}
+        <main className="max-w-7xl mx-auto px-4 md:px-8">{children}</main>
       </body>
     </html>
   );
