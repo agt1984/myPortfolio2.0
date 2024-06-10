@@ -1,4 +1,5 @@
 import { CustomLink } from "./CustomLink";
+import Image from "next/image";
 
 export function HeroSection() {
     return (
@@ -19,7 +20,14 @@ export function HeroSection() {
             My Work
           </CustomLink>
         </div>
-        <div></div>
+        <div className="hidden md:flex mx-auto">
+          <Image
+            src="/fotomiaLogomODIF.png"
+            alt="profile image"
+            width={400}
+            height={250}
+          />
+        </div>
       </section>
     );
 }
