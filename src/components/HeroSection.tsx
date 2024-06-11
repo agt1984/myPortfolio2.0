@@ -24,9 +24,11 @@ export function HeroSection() {
           <Image
             src="/fotomiaLogomODIF.png"
             alt="profile image"
-            width={400}
+            width={350}
             height={250}
+            className="object-cover object-top self-end"
           />
+          <div className="absolute bottom- w-full h-1/2"></div>
         </div>
       </section>
     );
