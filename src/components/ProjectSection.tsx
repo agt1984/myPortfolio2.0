@@ -33,9 +33,16 @@ function ProjectCard({ project }: IProjectCard) {
         />
       </div>
       <div className="p-4">
-        <ul>
+        <ul className="flex gap-4 mb-2">
           {project.stacks.map((stack) => {
-            return <li key={stack}>{stack}</li>;
+            return (
+              <li 
+                  key={stack} 
+                  className="px-4 py-1 text-xs border border-r-zinc-700 text-zinc-400 rounded-md"
+              >
+                {stack}
+              </li>
+            );
           })}
         </ul>
       </div>
