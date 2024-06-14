@@ -10,8 +10,13 @@ export function ProjectSection() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => {
-          return <ProjectCard key={project.title} project={project}/>;
+          return <ProjectCard key={project.title} project={project} />;
         })}
+      </div>
+      <div className="mt-10 flex justify-center">
+        <CustomLink href="https://github.com/agt1984" linkType="secondary">
+          See all Projects
+        </CustomLink>
       </div>
     </section>
   );
