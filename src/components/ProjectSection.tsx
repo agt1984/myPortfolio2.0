@@ -6,7 +6,7 @@ export function ProjectSection() {
   return (
     <section>
       <p className="font-title tracking-wider text-4xl uppercase">Projects</p>
-      <p className="text-zinc-400">My best project i have built</p>
+      <p className="text-zinc-400 mb-2">Projects that i have built</p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => {
@@ -46,11 +46,11 @@ function ProjectCard({ project }: IProjectCard) {
             );
           })}
         </ul>
-        <p>{project.title}</p>
+        <p className="text-lg font-medium">{project.title}</p>
         <p className="text-zinc-400">{project.desc}</p>
         <div className="flex gap-4 mt-4">
-          <CustomLink href={project.sourceCode}>Source Code</CustomLink>
-          <CustomLink href={project.liveAt}>Source Code</CustomLink>
+          <CustomLink href={project.sourceCode} linkType="secondary">Source Code</CustomLink>
+          <CustomLink href={project.liveAt} linkType="secondary">Live at</CustomLink>
         </div>
       </div>
     </div>

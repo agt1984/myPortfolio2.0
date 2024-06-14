@@ -5,7 +5,7 @@ export function HeroSection() {
     return (
       <section className="grid md:grid-cols-2 items-center h-[calc(100vh-70px)] max-h-[678px]">
         <div>
-          <p className="text-lg mb-1">Hello There</p>
+          <p className="text-lg mb-1">Hi, I am Alvaro Luis Gonzalez, and i am a</p>
           <h1 className="font-title tracking-wider text-3xl sm:text-6xl -ml-0.5">
             Full Stack Developer
           </h1>
@@ -26,7 +26,7 @@ export function HeroSection() {
             alt="profile image"
             width={350}
             height={250}
-            className="object-cover object-top self-end"
+            className="object-cover object-top self-end ml-12"
           />
           <div className="absolute bottom- w-full h-1/2"></div>
         </div>
