@@ -3,7 +3,7 @@ import { Heading } from "./Heading";
 
 export function SkillsSection() {
   return (
-    <section>
+    <section id="skills" className="scroll-mt-28">
         <Heading title="Skills" desc="My current stack are:" />
 
         <div className="space-y-6">
