@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto, Bebas_Neue } from "next/font/google";
 import { Navigation } from "../components/Navigation";
+import { Footer } from "@/components/FooterSection";
 
 const roboto = Roboto({
   weight: ["300","400","700"],
@@ -35,7 +36,10 @@ export default function RootLayout({
         )}
       >
         <Navigation />
-        <main className="max-w-7xl mx-auto px-4 md:px-8">{children}</main>
+        <main className="max-w-7xl mx-auto px-4 md:px-8">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
