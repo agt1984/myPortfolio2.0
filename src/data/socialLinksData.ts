@@ -6,15 +6,15 @@ import {
 
 export const socialLinks = [
   {
-    href: "instagram.com",
-    icon: AiOutlineInstagram,
+    href: "https://github.com/agt1984",
+    icon: AiOutlineGithub,
   },
   {
-    href: "instagram.com",
+    href: "https://www.linkedin.com/in/alvaro-luis-gonzalez-trejo-93a421125",
     icon: AiOutlineLinkedin,
   },
   {
-    href: "instagram.com",
-    icon: AiOutlineGithub,
+    href: "https://www.instagram.com/alvaroluis1.8.1/",
+    icon: AiOutlineInstagram,
   },
 ];

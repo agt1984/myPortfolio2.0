@@ -1,4 +1,3 @@
-import { title } from "process";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -10,10 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        title: "var(--font-bebas)"
-      }
+        title: "var(--font-bebas)",
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+  --font-bebas: 'Bebas Neue', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
 }
