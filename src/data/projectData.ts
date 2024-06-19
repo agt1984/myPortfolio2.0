@@ -1,11 +1,11 @@
 export const projects = [
   {
-    title: "Chat-bot-react",
-    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et, consectetur adipiscing elit",
-    stacks: ["Next.Js", "Express", "Socket.10"],
-    image: "/agt.jpg",
-    sourceCode: "https://github.com/",
-    liveAt: "https://github.com/",
+    title: "Chatbot de Empleate con Talento",
+    desc: "Este chatbot fue creado como parte de una landing page del stakeholder de Empléate con Talento, completamente hecho con React.",
+    stacks: ["React", "Express", "Socket.10"],
+    image: "/Empleate.png",
+    sourceCode: "https://github.com/agt1984/chatEmpleate",
+    liveAt: "https://chat-empleate.vercel.app/",
   },
   {
     title: "Chat-bot-react",
